@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - feature/*
-      - more/stuff/*
 
 jobs:
   merge-checks:
