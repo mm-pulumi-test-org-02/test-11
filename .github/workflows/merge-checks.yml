@@ -17,3 +17,12 @@ jobs:
 
       - name: Merge checks
         uses: moneymeets/action-merge-checks@feature/MD-5393-separate-workflow-from-merge-check-status
+
+      - name: github-status-action
+        uses: Sibz/github-status-action@v1.1.6
+        with:
+          authToken: ${{secrets.GITHUB_TOKEN}}
+          context: 'Test run'
+          description: 'Passed'
+          state: 'success'
+
