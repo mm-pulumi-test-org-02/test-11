@@ -14,6 +14,11 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip checks]')"
     steps:
       - uses: actions/checkout@v3
+        with:
+            name: 'my-status-01'
 
       - name: Merge checks
         uses: moneymeets/action-merge-checks@feature/MD-5393-separate-workflow-from-merge-check-status
+
+      - name: commit-status-updater
+        uses: ouzi-dev/commit-status-updater@v1.0.7
