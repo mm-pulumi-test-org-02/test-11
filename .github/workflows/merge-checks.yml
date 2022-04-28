@@ -18,4 +18,4 @@ jobs:
       - name: Merge checks
         uses: moneymeets/action-merge-checks@feature/MD-5393-separate-workflow-from-merge-check-status
         with:
-            repository-token: ${{ secrets.GITHUB_TOKEN }}
+            repository_token: ${{ secrets.GITHUB_TOKEN }}
