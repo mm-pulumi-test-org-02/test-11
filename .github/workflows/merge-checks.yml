@@ -17,6 +17,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Merge checks
-        uses: moneymeets/action-merge-checks@feature/MD-5393-separate-workflow-from-merge-check-status-test
+        uses: moneymeets/action-merge-checks@feature/MD-5393-separate-workflow-from-merge-check-status-test2
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
