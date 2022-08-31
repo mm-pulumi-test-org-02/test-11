@@ -1,7 +1,7 @@
 name: Deploy
 on: [ workflow_dispatch ]
 jobs:
-  deploy-heroku:
+  setup:
     runs-on: ubuntu-22.04
     env:
       PROJECT_NAME: test_variable
@@ -12,4 +12,12 @@ jobs:
           fetch-depth: 0
 
       - run: echo "Hello from caller workflow"
+
+  call-steps:
+    uses: ./.github/workflows/deploy-steps.yml
+
+  finish-up:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo "Final message from caller workflow"
 

@@ -1,0 +1,9 @@
+name: deployment steps
+
+on: [workflow_call]
+
+jobs:
+  deploy-steps:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo "Hello from STEPS workflow"
