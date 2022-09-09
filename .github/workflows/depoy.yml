@@ -15,9 +15,11 @@ jobs:
 
   call-steps:
     uses: ./.github/workflows/deploy-steps.yml
+    needs: setup
 
   finish-up:
     runs-on: ubuntu-22.04
+    needs: setup, call-steps
     steps:
       - run: echo "Final message from caller workflow"
 
