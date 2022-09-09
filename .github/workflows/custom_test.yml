@@ -13,7 +13,7 @@ jobs:
 
       - name: Set TEST_VAR
         id: set_var
-        run: echo ::set-output name=TEST_VAR::testvar
+        run: echo "::set-output name=TEST_VAR::testvar"
 
       - name: Read TEST_VAR
         run: python src/read_var.py
