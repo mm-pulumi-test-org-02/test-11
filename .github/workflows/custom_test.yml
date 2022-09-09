@@ -15,4 +15,9 @@ jobs:
         id: set_var
         run: echo ::set-output name=TEST_VAR::$(python src/set_var.py)
 
+      - name: Read TEST_VAR
+        run: python src/read_var.py
+        env:
+          TEST_VAR_INPUT: ${{ steps.set_var.TEST_VAR }}
+
 
