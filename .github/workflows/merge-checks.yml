@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - feature/**
-      - others/**
   pull_request_target:
 
 jobs:
