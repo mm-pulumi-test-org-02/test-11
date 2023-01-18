@@ -1,8 +1,6 @@
 # This file was added by Pulumi and should not be edited manually. To edit the contents of this file, please go
 # to the github-management project in moneymeets-pulumi and call `pulumi up` after changing the template file.
 
-# Additional comment!
-
 name: Merge checks
 
 on:
@@ -13,7 +11,7 @@ on:
 
 jobs:
   merge-checks:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
     permissions:
       contents: read
