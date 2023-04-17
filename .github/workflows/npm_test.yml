@@ -1,0 +1,9 @@
+name: NPM Test
+on: [ workflow_dispatch ]
+jobs:
+  custom_test:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - run: npm --version
+
